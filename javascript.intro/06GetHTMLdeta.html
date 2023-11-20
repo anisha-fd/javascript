@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get html data</title>
+</head>
+<body>
+    <input type="text" id="first" class="same" name="Anisha" value="Solanki">
+    <input type="text" id="second" class="same" value="Nikita" >
+
+    <script>
+        By Id
+
+        let a = document.getElementById('first')
+        let a = document.getElementById('first').value
+        console.log(a)
+        console.log(a.value)
+
+        By classname
+
+        let a = document.getElementsByClassName('same')
+        console.log(a)
+
+        By Name
+
+        let a =document.getElementsByName('Anisha')
+        console.log(a)
+
+
+        By tag Name
+
+        let a =document.getElementsByTagName('input')
+        console.log(a)
+
+    </script>
+    
+</body>
+</html>
