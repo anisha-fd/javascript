@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple validation form</title>
+</head>
+<body>
+    <h1>Simple Validation Form</h1>
+    <hr>
+    <input type="text" placeholder="uname" onblur="handalusername" >
+    <span id="error1"></span>
+    <br><br>
+    <input type="password" placeholder="password" onblur="handaluserpass">
+    <span id="error2"></span>
+    <br><br>
+    <input type="email" placeholder="email" onblur="handaluseremail">
+    <span id="error3"></span>
+    <br><br>
+    <input type="mobile" placeholder="mobile" onblur="handalusermobile" >
+    <span id="error4"></span>
+
+
+
+    <!--------Scrip start here------->
+     <script>
+
+        function handalusername(){
+            let Username = document.getElementById('uname').value;
+            console.log(Username);
+            if (Username == "") {
+                document.getElementById('error1').innerText ="Enter your name"
+                console.log('user name is emty');
+            }
+
+        }
+
+     </script>
+
+</body>
+</html>
