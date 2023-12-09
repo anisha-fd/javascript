@@ -8,7 +8,7 @@
     <style>
         body{
             /* background-color: darkblue; */
-            margin: 0;
+            margin: 0 auto;
             padding: 0;
         }
         .button{
@@ -20,40 +20,56 @@
 
         }
         input{
-            height: 30px;
+            height: 40px;
+            width: 25%;
             letter-spacing: 5px;
+            margin: 0 ;
+            margin-left: 5px;
+            background-color: aliceblue;
             
+        }
+        span{
+            margin-left: -27px;
         }
 
     </style>
 </head>
 <body>
-    <div class="button">
-        <input type="Password"  placeholder="Password" id="password">
-        
-        <span id="myinput"></span>
+    <!-- <label for="password">password</label> -->
+    <br><br>
+    <input type="password" name="" placeholder="password" id="show">
+   
         <span>
             <i class="fa fa-eye" id="eye" onclick="toggle()"> </i>
         </span>
-     </div> 
+     
 
 
     <script>
         
         function toggle(){
-            let a = document.getElementById('myinput');
-            if (a.type == 'password') {
-               a.type = "text"; 
-            } else {
-                a.type = "none";
-            }
-            
-        }
+            let a = document.getElementById("show");
+            if (a. type == "password") {
+                a.type = "text";
 
+             }else{
+                a.type = "password";
+             }
+        }
+            
+        
+
+
+
+
+        
+        
 
 
 
     </script>
+
+
     
     
     
