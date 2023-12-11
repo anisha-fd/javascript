@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task-5</title>
+</head>
+<body>
+    <h1>Using One functipn Validation</h1>
+    <hr>
+    <input type="text" name="first" id="first" onblur="handlevalidation(this,'error1','User Name')"/>
+    <span id="error1"></span>
+    <br/><br/>
+    <input type="password" name="second" id="second" onblur="handlevalidation(this,'error2','User password')"/>
+    <span id="error2"></span>
+    <br><br>
+    <input type="phone" name="third" id="third" onblur="handlevalidation(this,'error3','User Mobile')"/>
+    <span id="error3"></span>
+    <br><br>
+    <input type="email" name="fourth" id="fourth" onblur="handlevalidation(this,'error4','User Email')"/>
+    <span id="error4"></span>
+
+    <script>
+            //    let inpData = document.getElementById('first')
+                // console.log(inpData);
+
+         function handlevalidation(Anisha,Nika,praki) {
+            if (Anisha.value == "") {
+                console.log("please enter valid " + praki);
+                document.getElementById(Nika).innerText =
+                 "please enter valid" + praki;
+            }else{
+                console.log("");
+                document.getElementById(Nika).innerText = "";
+            }
+            
+         }
+
+
+    </script>
+</body>
+</html>

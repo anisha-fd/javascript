@@ -8,16 +8,20 @@
 <body>
     <h1>Simple Validation Form</h1>
     <hr>
-    <input type="text" placeholder="uname" onblur="handalusername" >
+    <label for="uname">User name</label>
+    <input type="text" name="uname" id="uname" onblur="handleUserName()" >
     <span id="error1"></span>
     <br><br>
-    <input type="password" placeholder="password" onblur="handaluserpass">
+    <label for="upass">User pass</label>
+    <input type="password" name="upass" id="upass"   onblur="handleUserPass()">
     <span id="error2"></span>
     <br><br>
-    <input type="email" placeholder="email" onblur="handaluseremail">
+    <label for="uemail">User email</label>
+    <input type="email" name="uemail" id="uemail"   onblur="handleUseremail()">
     <span id="error3"></span>
     <br><br>
-    <input type="mobile" placeholder="mobile" onblur="handalusermobile" >
+    <label for="umobile">User Mobile</label>
+    <input type="mobile" name="umobile" id="umobile"   onblur="handleUserMobile()" >
     <span id="error4"></span>
 
 
@@ -25,14 +29,55 @@
     <!--------Scrip start here------->
      <script>
 
-        function handalusername(){
+        function  handleUserName() {
             let Username = document.getElementById('uname').value;
             console.log(Username);
             if (Username == "") {
-                document.getElementById('error1').innerText ="Enter your name"
+                document.getElementById('error1').innerText ="please Enter Your Name"
                 console.log('user name is emty');
             }
+            else{
+                document.getElementById('error1').innerText =""
+                console.log('user name is'+ Username);
+            }
 
+        }
+        function handleUserPass() {
+            let UserPass = document.getElementById("upass").value;
+            console.log(UserPass);
+            if (UserPass == "") {
+                document.getElementById('error2').innerText = "Please Enter Your Password"
+                console.log('User Pass is empty');
+            }
+            else{
+                document.getElementById('error2').innerText = " "
+                console.log('User Pass is ' + UserPass);
+            }
+        }
+        function handleUseremail() {
+            let Useremail = document.getElementById('uemail').value;
+            console.log(Useremail);
+            if (Useremail == "") {
+                document.getElementById('error3').innerText = "Please Enter Your Email"
+                console.log('User Email is empty')
+            }
+            else{
+                document .getElementById('error3').innerText = " "
+                console.log('User email is'+ Useremail);
+            }
+            
+        }
+        function handleUserMobile(){
+            let UserMobile = document.getElementById('umobile').value;
+            console.log(UserMobile);
+            if (UserMobile == "") {
+                document.getElementById('error4').innerText = "Please Enter Your Mobile"
+                console.log('User Mobile is empty')
+            }
+            else{
+                document.getElementById('error4').innerText = " "
+                console.log('User Mobile is '+ UserMobile);
+            }
         }
 
      </script>
