@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instagarm</title>
+    <style>
+
+        .box{
+            border: 2px solid black;
+            width: 50%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        .logo{
+            height: 120px;
+            width: 50%;
+        }
+        .name{
+            align-items: center;
+            /* display: flex; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="../IMAGES/Instagram-Logo-2010-2013-500x281.png" height="30%" class="logo" >
+        <br><br>
+        <div class="name">
+            <p id="unamp">Phone number, username, or email</p>
+            <input id="phone-number" oninput="upi()" class="inputs" type="text" placeholder="">
+        </div> 
+        <div class="pass">
+            <p class="first" id="first">Password</p>
+                <input id="pass-id" class="inputs"  oninput="upi2()" type="password" placeholder="">
+                <p id="show" onclick="handlevalidation()">Show</p>
+        </div> 
+    </div>
+    
+</body>
+</html>

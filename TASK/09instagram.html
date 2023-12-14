@@ -33,6 +33,9 @@
             color:  white;
             font-weight: bold;
         }
+        .unamep{
+               margin-top: 5px;
+        }
         .box-2{
             height: 70px;
             width: 100%;
@@ -55,11 +58,14 @@
     <div class="box">
         <img src="../IMAGES/Instagram-Logo-2010-2013-500x281.png" height="30%" >
         <br><br>
-        <input type="text" id="name" placeholder=" Phone Number,Username,or email" >
-        <br><br>
+        <div id="first">
+        <input type="text"  id="phone-num"  oninput="dtu()"     placeholder=" Phone number, username, or email " >
+        </div>
+        <br>
         <input type="password" id="show" placeholder="Password">
         <span>
-            <i class="fa fa-eye" id="eye" onclick="toggle()"> </i>
+            <!-- <i class="fa fa-eye" id="eye" onclick="toggle()"> </i> -->
+            <!-- <i class="fa-solid fa-eye-slash" onclick="toggle2()"  id="hide"></i> -->
         </span> 
         <br><br>
         <button>Log in</button>
@@ -79,14 +85,48 @@
         </div>
     </div>
     <script>
-         function toggle() {
-            let a = document.getElementById("show");
-             if (a.type == 'password') {
-                a.type = "text";
-             } else {
-                a.type = "password";
-             }
+           function dtu(){
+            if(document.getElementById("phone-num").value = ""){
+                document.getElementById("first").style.fontSize = "9px"
+                document.getElementById("unamep").style.top = "1px";
+                document.getElementById("unamep").style.transition = "0.1s";
+            }
+            else{
+                document.getElementById("unamep").style.top = "8px";
+                document.getElementById("unamep").style.fontSize = "13px";
+
+            }
+            
          }
+
+
+
+
+
+
+
+
+
+
+
+
+        //  function toggle() {
+        //     let a = document.getElementByid("show");
+        //      if (a.type == 'password') {
+        //         a.type = "text";
+        //      } else {
+        //         a.type = "password";
+        //      }
+        //  }
+
+        //  function toggle2() {
+        //     let a = document.getElementById("hide");
+        //     if (a.type == 'password'){
+        //         a.type = "text";
+        //     }else{
+        //         a.type = "password";
+        //     }
+        //  }
     </script>
 </body>
 </html>
