@@ -5,88 +5,114 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator </title>
     <style>
-
-        .center{
-            margin: auto;
-            width: 50%;
-            border: 3px solid black;
-            padding: 10px;
-            background-color: aquamarine;
-            text-align: center;
-        }
-        button{
-            height: 40px;
-            width: 20%;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        
         }
     
-
-
-
-
-        /* *{
-            /* background-color: brown; */
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div{
             text-align: center;
+            border: 3px solid black;
+            height: 300px;
+            background-color: rgb(62, 240, 240);
+            width: 50%;
+        }
+        div h2{
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+        div hr{
+            margin: 14px 0;
+        }
+        div input[type=number] {
+              margin: 8px 0;
+              padding: 8px;
+              /* width: 100%; */
+              font-size: 16px;
+        }
+        div input[type=number]:read-only{
+            border: 1px solid black;
+            background-color: cadetblue;
+            text-align: center;
+            font-weight: bold;
+            font-size: 22px;
             
         }
-        button{
-            height: 20px;
-            width: 40%;
+        div button{
+            margin: 0 5px;
+            padding: 6px 0;
+            width: 67px;
+            border: 2px solid blue;
+            font-size: 30px;
             font-weight: bold;
+            cursor: pointer;
         }
-        .b-1{
-            border: 5px solid black;
-            height: 400px;
-            width: 60%;
-            margin: 0 auto;
+        div button:hover {
+            background-color: aqua;
         }
-        .box-1{
-            height: 20px;
-            width: 10%;
-            margin-top: 50px;
-            padding-top: 20px;
-        } 
         
     </style>
     
 </head>
 <body>
-    <div class="center">
-        <h1>Calculator</h1>
+
+    <div>
+             <h1>Simple Calculator</h1><br>
+      <input type="number" placeholder="number1" id="num1">
+      <br>
+      <input type="number" placeholder="number2" id="num2">
+      <br>
+      <button  id="add">+</button> 
+      <button id="sub">-</button> 
+      <button id="mul">*</button> 
+      <button id="div">/</button> 
+      <br>
+      <input type="number" readonly id="result" />      
+    </div>
+
+    <script  type="text/javascript" >
+     var n1 = document.getElementById("num1");
+     var n2 = document.getElementById("num2");
+     var res = document.getElementById("result");
+     
+     
+     document.getElementById("add").addEventListener
+     ("click" ,function(){
+        res.value = 
+        parseInt(n1.value)+parseInt(n2.value);
+     });
 
 
-        <form action="result">
-            <input type="number" id="num1" placeholder="number1"/>
-            <br/>
-            <br/>
-            <input type="number" id="num2" placeholder="number2"/>
-            <br>
-            <br>
-            <button id="add">+</button>
-            <button id="sub">-</button>
-            <button id="mul">*</button>
-            <button id="div">/</button>
-            <input type="number" readonly id="result"/>
+     document.getElementById("sub").addEventListener
+     ("click",function(){
+        res.value =
+        parseInt(n1.value)-parseInt(n2.value);
+     });
 
-             <br><br>
-             <!-- <div class="result">
-                <input type="text" id="ans" readonly="readonly"> 
-             </div>  -->
-               </form>
-</div>
-               <script type="text/javascript">
-                var num1=document.getElementById("num1")
-                var num2=document.getElementById("num2")
-                var result=document.getElementById("result")
+     document.getElementById("mul").addEventListener
+     ("click", function(){
+           res.value =
+           parseInt(n1.value)*parseInt(n2.value);
+     });
 
-               document.getElementById("add").addEventListener("click" ,function(){
-                res.value=
-                parseInt(n1.value)+parseInt(n2.value);
-               });
-            
+     document.getElementById("div").addEventListener
+     ("click",function(){
+        res.value =
+        parseInt(n1.value)/parseInt(n2.value);
+     });
+     
+     
 
-
-               </script>
-    
+         
+    </script>
     
 
 
