@@ -36,6 +36,11 @@
         .unamep{
                margin-top: 5px;
         }
+        .show{
+            position: absolute;
+            left: 57%;
+            top: 36%;
+        }
         .box-2{
             height: 70px;
             width: 100%;
@@ -51,6 +56,41 @@
         span{
             margin-left: -27px;
         }
+        .uname{
+            display: flex;
+            align-items: center;
+        }
+        .uname{
+            position: relative;
+        }
+        .uname p{
+            position: absolute;
+            z-index: 1;
+            font-size: 13px;
+            top:9px;
+        }
+        .uname input{
+            position: relative;
+            z-index: 2;
+        }
+        .uname{
+            width: 99%;
+            
+            margin-left: 19%;
+            /* margin: 4px auto; */
+            /* padding: 9px 0 7px 8px; */
+            /* background-color: rgb(241, 241, 241); */
+            /* border-radius: 4px; */
+            /* border: 1px solid grey; */
+        }
+        .inputs{
+            /* background: transparent; */
+            /* border: 0px solid black; */
+            /* width: 100%; */
+            outline: none;
+            margin: 2px 0;
+            
+        }
         
     </style>
 </head>
@@ -58,16 +98,27 @@
     <div class="box">
         <img src="../IMAGES/Instagram-Logo-2010-2013-500x281.png" height="30%" >
         <br><br>
-        <div id="first">
-        <input type="text"  id="phone-num"  oninput="dtu()"     placeholder=" Phone number, username, or email " >
+
+        <div class="uname">
+            <p id="unamep">Phone number, username, or email</p>
+            <input id="phone-number" oninput="dtu()" class="inputs" type="text" placeholder="">
         </div>
+        <!-- <div id="first">
+        <input type="text"  id="phone-num"  oninput="dtu()"     placeholder=" Phone number, username, or email " >
+        </div> -->
         <br>
-        <input type="password" id="show" placeholder="Password">
-        <span>
+
+        
+         <div class="password">
+            <input id="pass-id" class="ok" oninput="phs()" type="password" placeholder="password">
+            <p class="show" id="show" onclick="handlevalidation()">Show</p>
+        </div> 
+        <!-- <input type="password" id="show" placeholder="Password"> -->
+        <!-- <span> -->
             <!-- <i class="fa fa-eye" id="eye" onclick="toggle()"> </i> -->
             <!-- <i class="fa-solid fa-eye-slash" onclick="toggle2()"  id="hide"></i> -->
-        </span> 
-        <br><br>
+        <!-- </span>  -->
+        <br>
         <button>Log in</button>
         <p>_______________OR______________</p>
         <br>
@@ -85,19 +136,77 @@
         </div>
     </div>
     <script>
-           function dtu(){
-            if(document.getElementById("phone-num").value = ""){
-                document.getElementById("first").style.fontSize = "9px"
+
+        
+            function dtu(){
+            if(document.getElementById("phone-number").value = ""){
+                document.getElementById("unamep").style.fontSize = "9px"
                 document.getElementById("unamep").style.top = "1px";
                 document.getElementById("unamep").style.transition = "0.1s";
-            }
+           }
             else{
                 document.getElementById("unamep").style.top = "8px";
-                document.getElementById("unamep").style.fontSize = "13px";
+                 document.getElementById("unamep").style.fontSize = "13px";
 
             }
             
          }
+
+
+
+         function  handlevalidation() {
+                    var a = document.getElementById("pass-id");
+                    if(a.type == "password"){
+                        a.type = "text";
+                        document.getElementById("show").innerText = "Hide";
+                    }else{
+                        document.getElementById("show").innerText = "Show";
+                        a.type = "password";
+                    }
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        //   function dtu(){
+        //     if(document.getElementById("phone-number").value = ""){
+        //         document.getElementById("uname").style.fontSize = "9px"
+        //         document.getElementById("uname").style.top = "1px";
+        //         document.getElementById("uname").style.transition = "0.1s";
+        //    }
+        //     else{
+        //         document.getElementById("uname").style.top = "8px";
+        //          document.getElementById("uname").style.fontSize = "13px";
+
+        //     }
+            
+        //  }
 
 
 
