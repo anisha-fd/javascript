@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Task</title>
+    <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" >
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .Box i{
+            margin: 0 auto;
+            height: 100px;
+            width: 100%;
+            margin-left: 50px;
+        }
+        .dark{
+            background-color: rgb(15, 14, 14);
+            color: rgb(238, 222, 222);
+        }
+        .light{
+            background-color: rgb(241, 235, 235);
+            color: rgb(17, 17, 17);
+        }
+        div{
+            text-align: center;
+        }
+        button{
+            height: 50px;
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <h1>Dark Mode</h1>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br> At molestiae non ex nihil porro! Eius accusamus officia,<br> suscipit veniam numquam possimus a itaque, dolorem in doloribus porro et repellendus obcaecati.</p>
+    <button onclick="darkmode()">Dark Mode</button>
+    <button onclick="lightmode()">Light Mode</button>
+  <script>
+
+
+    function darkmode() {
+        let element = document .body;
+        let content = document.getElementById("Dark Mode");
+        element.className = "dark";
+        content.innerText = "Dark mode is on";
+    }
+    function lightmode(){
+        let element = document.body;
+        let content = document.getElementById("Dark Mode");
+        element.className = "Light";
+        content.innerText = "Dark mode off"
+    }
+    
+  </script>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+    <div class="Box">
+        <!-- <i class="fa-regular fa-sun" >Dark mode</i> -->
+    </div>
+</body>
+</html>
