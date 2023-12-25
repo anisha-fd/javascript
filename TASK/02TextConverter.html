@@ -5,41 +5,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Converter</title>
     <style>
+        *{
+            /* border: 1px solid black; */
+            box-sizing: border-box;
+        }
         .box{
             margin: auto;
-            width: 50%;
+            width: 80%;
             padding: 10px;
-            border: 7px solid white;
-            background-color: dimgray;
+            height: 150px;
+            /* border: 2px solid rgb(22, 21, 21); */
+            /* background-color: dimgray; */
+            
 
 
 
         }
         h1{
             text-align: center;
+            margin-left: -200px;
         }
+        
         button{
             height: 50px;
-            width: 30%;
+            width: 20%;
+            margin-left: 400px;
+            margin: 5px;
+        
+            
         }
         input{
-    
         }
     </style>
 </head>
 <body>
 
 
-    
-     <div class="box"> 
-         <h1>Text Converter</h1>
+    <h1>Text Converter</h1>
+     <div class="box">
         
-    
-        <input type="text" class="string" placeholder="text-converter"><br>
+        <input type="text" class="text"    id="mobile">
+     </div>
+     <div class="button">
+        <button onclick="clickme()">uppercase</button>
+         <!--- uppercase button is here ------>
+         <button onclick="lowerCase()">Lowercase</button>
+         <!----Lowercase button is here-------->
+         <button onclick="trim()">Trim</button><br>
+         <!--------trim button is here-->
+         <button onclick="replace()">Replace</button>
+         <!--------replace button is here-->
+         <button onclick="length()">Length</button>
+         <!---------------length button is here------>
+         <button onclick="clear()">Clear</button><br>
+         <!-----------clear butto is here-->
+         <button onclick="wordcount()">Wordcount</button>
+         <!--------workcount button is here----->
+         <button onclick="charcount()">Charcount</button>
+
+         
+     </div>
+     <script>
+            
+            function clickme()
+            {
+            
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.toUpperCase();
+            }
+            function lowerCase()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.lowerCase();
+            }
+            function trim()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.trim();
+            }
+            function replace()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.Replace();
+            }
+            function length()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.length();
+            }
+            function clear()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.clear();
+            }
+            function wordcount()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.WordCount();
+            }
+            function charcount()
+            {
+                let inputtext = document.getElementById("mobile").value
+                document.getElementById("mobile").value=inputtext.charcount();
+            }
+
+            
+
+
+            // function clickme()
+            // {
+            //     let inputtext = document.getElementById("mobile").value
+            //     document.getElementById("mobile").value=inputtext.toUpperCase();
+
+            // }
+
+     </script>
+       
+       
     
        
 
-    </div> 
+    
+</body>
+</html>
 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> case in js</title>
+    <style>
+        .box1 button{
+             justify-content: space-evenly;
+        
+            margin:10px;
+            background-color: rgb(212, 252, 239);
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+        .contain{
+            margin: 120px 120px;
+            border: 2px;
+            background-color: rgb(174, 227, 249);
+            width: 50%;
+            padding: 90px;
+            border-radius: 2px solid black;
+        }
+        .box2 button{
+        justify-content: space-evenly;
+        margin:10px;
+        background-color: rgb(212, 252, 239);
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 15px;
+    }
+     .box input{
+      background-color:transparent gray;
+      border-radius: 7px;
+      width: 63%;
+      height: 40%;
+     }
+    </style>
+
+</head>
+<body>
+    <!-- <div class="contain">
+        <div class="box">
+            <input type="text" class="test" id="mobile" >
+        </div>
+        <div class="box1">
+            <button onclick="clickme()">uppercase</button>
+             convert to capital latter -->
+            <!-- <button onclick="lowerCase()">lowercase</button>
+             convet to small latter -->
+            <!-- <button onclick="trim()">trim</button> -->
+            <!-- trim se starting and ending space space remove hoti hai  -->
+            <!-- <button onclick="replace()">replace</button> -->
+             
+        <!-- </div>
+        <div class="box2">
+            <button onclick="length()">length</button>
+            <button onclick="clear()">clear</button>
+            <button onclick="wordcount()">wordcount</button>
+            <button onclick="charcount()">charcount</button> -->
+        <!-- </div> -->
+    <!-- </div> --> 
+
+    <script>
+        // function uppercase(){
+    //         function clickme()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.toUpperCase();
+
+    //         }
+    //         function lowerCase()
+    //         {
+    //             let inputtext =document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.toLowerCase();
+    //         }
+    //         function trim()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.trim();
+    //         }
+    //         function replace()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.replace();
+    //         }
+    //         function length()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.length;
+    //         }
+    //         function clear()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.clear();
+    //         }
+    //         function wordcount()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.wordcount();
+    //         }
+    //         function charcount()
+    //         {
+    //             let inputtext = document.getElementById("mobile").value
+    //             document.getElementById("mobile").value=inputtext.charcount();
+    //         }
+    // </script>
 </body>
 </html>
