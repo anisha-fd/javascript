@@ -8,12 +8,15 @@
         *{
             /* border: 1px solid black; */
             box-sizing: border-box;
+            background-color: aquamarine;
         }
         .box{
             margin: auto;
             width: 80%;
             padding: 10px;
             height: 150px;
+            font-weight: bold;
+            font-size: 25px;
             /* border: 2px solid rgb(22, 21, 21); */
             /* background-color: dimgray; */
             
@@ -23,7 +26,8 @@
         }
         h1{
             text-align: center;
-            margin-left: -200px;
+            margin-left: -400px;
+            text-shadow: 10px 10px #558ABB;
         }
         
         button{
@@ -31,10 +35,19 @@
             width: 20%;
             margin-left: 400px;
             margin: 5px;
+            background-color: brown;
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+
         
             
         }
         input{
+        height: 50px;
+        width: 60%;
+        border-radius: 5px;
+        background-color: cornflowerblue;
         }
     </style>
 </head>
@@ -63,6 +76,12 @@
          <!--------workcount button is here----->
          <button onclick="charcount()">Charcount</button>
 
+     <div id="display">
+        <input type="text" id="find" placeholder="enter a word you want to replace" />
+        <input type="text" id="replace" placeholder="enter a word you want to replace with"/>
+        <span id="hey">display result</span>
+     </div>    
+
          
      </div>
      <script>
@@ -76,7 +95,7 @@
             function lowerCase()
             {
                 let inputtext = document.getElementById("mobile").value
-                document.getElementById("mobile").value=inputtext.lowerCase();
+                document.getElementById("mobile").value=inputtext.toLowerCase();
             }
             function trim()
             {
@@ -100,8 +119,10 @@
             }
             function wordcount()
             {
-                let inputtext = document.getElementById("mobile").value
-                document.getElementById("mobile").value=inputtext.WordCount();
+                let text = document.getElementById("mobile").value;
+                console.log(text);
+                let b = text.trim().spilt(/\s+/).length;
+                document.getElementById("hey").innerText = b + "word";
             }
             function charcount()
             {
@@ -130,7 +151,7 @@
 </html>
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -145,8 +166,8 @@
             padding: 15px;
             border-radius: 5px;
             font-size: 15px;
-        }
-        .contain{
+        } -->
+        <!-- .contain{
             margin: 120px 120px;
             border: 2px;
             background-color: rgb(174, 227, 249);
@@ -161,8 +182,8 @@
         padding: 15px;
         border-radius: 5px;
         font-size: 15px;
-    }
-     .box input{
+    } -->
+     <!-- .box input{
       background-color:transparent gray;
       border-radius: 7px;
       width: 63%;
@@ -171,7 +192,7 @@
     </style>
 
 </head>
-<body>
+<body> -->
     <!-- <div class="contain">
         <div class="box">
             <input type="text" class="test" id="mobile" >
@@ -179,12 +200,12 @@
         <div class="box1">
             <button onclick="clickme()">uppercase</button>
              convert to capital latter -->
-            <!-- <button onclick="lowerCase()">lowercase</button>
-             convet to small latter -->
-            <!-- <button onclick="trim()">trim</button> -->
+             <!-- <button onclick="lowerCase()">lowercase</button> -->
+             <!-- convet to small latter --> 
+             <!-- <button onclick="trim()">trim</button> --> 
             <!-- trim se starting and ending space space remove hoti hai  -->
             <!-- <button onclick="replace()">replace</button> -->
-             
+              
         <!-- </div>
         <div class="box2">
             <button onclick="length()">length</button>
@@ -192,11 +213,11 @@
             <button onclick="wordcount()">wordcount</button>
             <button onclick="charcount()">charcount</button> -->
         <!-- </div> -->
-    <!-- </div> --> 
+    <!-- </div> 
 
-    <script>
-        // function uppercase(){
-    //         function clickme()
+     <script>
+         function uppercase(){
+           function clickme()
     //         {
     //             let inputtext = document.getElementById("mobile").value
     //             document.getElementById("mobile").value=inputtext.toUpperCase();
@@ -212,11 +233,11 @@
     //             let inputtext = document.getElementById("mobile").value
     //             document.getElementById("mobile").value=inputtext.trim();
     //         }
-    //         function replace()
-    //         {
+    //         function replace() -->
+    <!-- //         {
     //             let inputtext = document.getElementById("mobile").value
-    //             document.getElementById("mobile").value=inputtext.replace();
-    //         }
+    //             document.getElementById("mobile").value=inputtext.replace(); -->
+    <!-- //         }
     //         function length()
     //         {
     //             let inputtext = document.getElementById("mobile").value
@@ -232,11 +253,8 @@
     //             let inputtext = document.getElementById("mobile").value
     //             document.getElementById("mobile").value=inputtext.wordcount();
     //         }
-    //         function charcount()
-    //         {
-    //             let inputtext = document.getElementById("mobile").value
-    //             document.getElementById("mobile").value=inputtext.charcount();
-    //         }
-    // </script>
+    //         function charcount() -->
+    <!-- //         -->
+     </script>
 </body>
 </html>
