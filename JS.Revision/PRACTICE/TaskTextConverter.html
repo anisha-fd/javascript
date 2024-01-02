@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tex Converter</title>
+    <style>
+        .Box{
+            box-sizing: border-box;
+            border: 2px solid black;
+            height: 500px;
+            width: 50%;
+            background-color: darkslategray;
+        }
+        button{
+            height: 50px;
+            width: 30%;
+            font-size: 30px;
+            background-color: brown;
+            color: aqua;
+            font-style: italic;
+            border-radius: 10px;
+            /* border: 2px solid black; */
+            
+        }
+        h1{
+            color: aqua;
+            align-items: center;
+            margin-left: 30%;
+            font-size: 50px;
+            
+        }
+        input{
+            height: 60px;
+            width: 70%;
+            font-size: xx-large;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Box">
+        <h1>Tex Converter</h1>
+        <br>
+        <input type="text" placeholder="Enter Text" class="first" id="first" value="">
+        <br><br>
+        <button  onclick="uppercase()">uppercase</button>
+        <button onclick="lowercase()">lowerCase</button>
+        <button onclick="trim()">trim</button><br><br>
+        <button onclick="replace()">replace</button>
+        <button onclick="length()">length</button>
+        <button onclick="clear()">clear</button><br><br>
+        <button onclick="wordcount()">wordcount</button>
+        <button onclick="charcount()">charcount</button>
+        <button onclick="split()">split</button>
+
+
+
+    </div>
+
+    <script>
+
+        function uppercase()
+        {
+            let a = document.getElementById("first").value
+            document.getElementById("first").value = a.toUpperCase(); 
+
+        }
+        function lowercase()
+        {
+            let b = document.getElementById("first").value
+            document.getElementById("first").value = b.toLowerCase();
+        }
+        function trim()
+        {
+            let c = document.getElementById("first").value
+            document.getElementById("first").value = c.trim();
+        }
+        function replace()
+        {
+            let d = document.getElementById("first").value
+            document.getElementById("first").value = d.replace('Anisha','Solanki');
+        }
+        function length()
+        {
+            let e = document.getElementById("first").value
+            document.getElementById("first").value = e.length;
+        }
+        function clear(){
+            let f = document.getElementById("first").value
+            document.getElementById("first").value = f.clear();
+        }
+        function wordcount()
+        {
+            let g = document.getElementById("first").value
+            document.getElementById("first").value = g.wordcount();
+        }
+        function charcount()
+        {
+            let h = document.getElementById("first").value
+            document.getElementById("first").value = h.charcount();
+        }
+        function split()
+        {
+            let i = document.getElementById("first").value
+            document.getElementById("first").value = i.split("");
+        }
+        
+
+    </script>
+    
+</body>
+</html>
