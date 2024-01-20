@@ -21,7 +21,7 @@
             
         }
         input{
-            height: 35px;
+            height: 37px;
             width: 60%;
             font-weight: bold;
         }
@@ -56,23 +56,34 @@
          
         #sh{
             position: absolute;
-             z-index: 2; 
-            left: 57%;
-            top: 39%;
+             /* z-index: 2;  */
+            left: 71%;
+            top: 29%;
         }
         .phn{
-            position: absolute;
+            /* position: absolute; */
             top: 27%;
             left: 550px;
             font-size: 14px;
         }
         .ps{
-            position: absolute;
+            /* position: absolute; */
             top: 37%;
             left: 550px;
             font-size: 14px;
         }
-        
+        .Wraper{
+          position: relative;
+          /* border: 1px solid red; */
+          height: 45px;
+        }
+        label{
+            position: absolute;
+            top: 15px;
+            font-size: 15px;
+            font-weight: lighter;
+            color: gray;
+        }
 
         
         
@@ -87,9 +98,9 @@
         <img src="../IMAGES/Instagram-Logo-2010-2013-500x281.png" height="30%" >
         <br><br>
 
-        <div class="uname">
-            <p id="ph" class="phn" oninput="handleusername()">Phone number, username, or email</p>
-            <input id="log" oninput="handleusername()" class="user" type="text" placeholder="">
+        <div class="Wraper">
+            <label for="uname" id="label1">Phone number, username, or email</label>
+            <input id="log" name="uname" oninput="sow()"  type="text" >
         </div>
         <!-- <div id="first">
         <input type="text"  id="phone-num"  oninput="dtu()"     placeholder=" Phone number, username, or email " >
@@ -97,10 +108,10 @@
         <br>
 
         
-         <div class="password">
-            <p id="ph" class="ps" oninput="handletransform()">Password</p>
+         <div class="Wraper">
+            <label for="upass" id="label2">Password</label>
 
-            <input id="pass" class="pwd" oninput="handletransform()" type="password" placeholder="" onclick="show()">
+            <input id="pass"  oninput="show()" type="password" placeholder="" >
             <span id="sh" onclick="handletransform()">Show</span>
         </div> 
         <!-- <input type="password" id="show" placeholder="Password"> -->
@@ -137,21 +148,73 @@
                         a.type = "password";
                     }
                   }
+                 
 
-              function handleusername() {
-                if (document.getElementById("pass").value!="") {
-                    document.getElementById("ph").style.fontSize="2px";
-                    document.getElementById("ph").style.transition="2s";
-                    document.getElementById("ph").style.top="1px";
-                    document.getElementById("sh").style.display="block";
-                    
-                } 
-                else {
-                    document.getElementById("ph").style.fontSize="2px";
-                    document.getElementById("sh").style.display="none";
-                    document.getElementById("ph").style.top="2px";
+                function sow() {
+                    if (document.getElementById("log").value !=""
+                    ) {
+                        document.getElementById("label1").style.fontSize = "9px";
+                        document.getElementById("label1").style.top = "7px";
+                        document.getElementById("label1").style.transition ="0.2s";
+                        document.getElementById("label1").style.color="grey";
+                        
+                    }
+                    else{
+                        document.getElementById("label1").style.top ="7px";
+                        document.getElementById("label1").style.fontSize ="13px";
+                    }
                 }
-              }    
+
+                
+
+                function show(){
+                    if (document.getElementById("pass").value !=""){
+                        document.getElementById("label2").style.fontSize = "13px";
+                        document.getElementById("label2").style.top ="7px";
+                        document.getElementById("label2").style.transition = "0.1s";
+                        document.getElementById("label2").style.color ="grey";
+                        document.getElementById("show").style.display ="block";
+
+
+                    }
+                    else{
+                        document.getElementById("show").style.display="none";
+                        document.getElementById("label2").style.top ="8px";
+                        document.getElementById("label2").style.fontSize="13px";
+                    }
+                       
+                        
+                    }
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            //   function handleusername() {
+            //     if (document.getElementById("pass").value!="") {
+            //         document.getElementById("ph").style.fontSize="2px";
+            //         document.getElementById("ph").style.transition="2s";
+            //         document.getElementById("ph").style.top="1px";
+            //         document.getElementById("sh").style.display="block";
+                    
+            //     } 
+            //     else {
+            //         document.getElementById("ph").style.fontSize="2px";
+            //         document.getElementById("sh").style.display="none";
+            //         document.getElementById("ph").style.top="2px";
+            //     }
+            //   }    
 
 
 

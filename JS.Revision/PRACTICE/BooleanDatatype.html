@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean data type</title>
+</head>
+<body>
+    <p>Booleans are returned as-is.</p>
+    <ul>
+       <li> undefined turns into false.</li>
+       <li> null turns into false.</li>
+       <li> 0, -0, and NaN turn into false; other numbers turn into true.</li>
+       <li> 0n turns into false; other BigInts turn into true.</li>
+       <li> The empty string "" turns into false; other strings turn into true.</li>
+       <li> Symbols turn into true.</li>
+       <li> All objects become true.</li>
+    </ul>
+
+    <script>
+           
+           const bNoParam = new Boolean();
+           console.log(bNoParam);
+
+           const bzero = new Boolean(0);
+           console.log(bzero);
+
+           const bnull = new Boolean(null);
+           console.log(bnull);
+
+           const bemptystring = new Boolean("");
+           console.log(bemptystring);
+
+           const bfalse = new Boolean(false);
+           console.log(bfalse);
+
+           const btrue = new Boolean(true);
+           console.log(btrue);
+
+           const btruestring = new Boolean("true");
+           console.log(btruestring);
+
+           const bfalsestring = new Boolean("false");
+           console.log(bfalsestring);
+
+           const bsulin = new Boolean("Su Lin");
+           console.log(bsulin);
+
+           const bArrayProto = new Boolean("[]");
+           console.log(bArrayProto);
+
+
+    </script>
+</body>
+</html>
