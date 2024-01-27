@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Change Currency </title>
+</head>
+<body>
+    <input type="text" value="" id="input">
+    <select name="" id="select" onchange="change()">
+                  <option value="84">Doller</option>
+                  <option value="90.50">Euro</option>
+                  <option value="0.9522">Ruble</option>
+                  <option value="105.11">Pound</option>
+                </select>
+                <b id="abc"></b>
+<script>
+    let a  = document.getElementById("input")
+    console.log(a);
+
+    let b = document.getElementById("input")
+    console.log(b);
+     
+    let c = document.getElementById("input")
+    console.log(c);
+
+    function change(){
+        c.innerHTML = (a.value * b.value);
+    }
+
+</script>
+
+    
+</body>
+</html>
